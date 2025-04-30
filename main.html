@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+body {
+        background-color: lightblue;
+      }
+h1 {
+        color: white;
+        text-align: center
+      }
+</style>
+</head>
+<body>
+<h1>
+welcome
+</h1>
+<h3>
+هنا سنعرض عليكم أهم المشروعات التنموية التي تمت في العِقد الماضي في مصر
+</h3>
+<h3>
+في عهد الرئيس عبدالفتاح السيسي
+</h3>
+<img src="https://www.presidency.eg/media/93876/%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D9%81%D8%AA%D8%A7%D8%AD-%D8%A7%D9%84%D8%B3%D9%8A%D8%B3%D9%8A-black-one-finljpg.jpg" style="width:400px">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<ul id="myUL">
+  <li><a href="./الشبكة القومية للطرق.html">الشبكة القومية للطرق</a></li>
+  <li><a href="./قناة السويس الجديدة.html">قناة السويس الجديدة</a></li>
+
+  <li><a href="./اكتشاف حقل ظهر.html">اكتشاف حقل ظهر</a></li>
+  <li><a href="./العاصمة الإدارية الجديدة.html">العاصمة الإدارية الجديدة</a></li>
+
+  <li><a href="./مبادرة حياة كريمة لسنة .html">مبادرة حياة كريمة</a></li>
+  <li><a href="./تطوير العشوائيات.html">تطوير العشوائيات</a></li>
+
+  <li><a href="./نقل المومياوات.html">نقل المومياوات</a></li>
+  <li><a href="./توسيع مشاريع الطاقة المتجددة .html">توسيع مشاريع الطاقة المتجددة </a></li>
+
+  <li><a href="./تحلية مياه البحر.html">تحلية مياه البحر</a></li>
+  <li><a href="./المتحف المصري .html">تكملة انشاء المتحف المصري الجديد</a></li>
+
+  <li><a href="./تطوير هضبة الأهرامات .html">تطوير هضبة الأهرامات</a></li>
+  <li><a href="./index.html">رؤيه الكل</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+  <footer class="bg-dark">
+    <p>حقوق النشر © 2025 | عمل الطالب : عبدالوهاب خالد تحت اشراف أ.أحمد عبدالعزيز </p>
+  </footer>
+</body>
+</html>
